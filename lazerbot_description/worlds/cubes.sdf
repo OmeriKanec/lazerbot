@@ -1,6 +1,3 @@
-<?xml version="1.0" ?>
-
-
 <sdf version='1.10'>
   <world name='empty'>
     <physics name='1ms' type='ignored'>
@@ -75,7 +72,7 @@
       <self_collide>false</self_collide>
     </model>
     <model name='box'>
-      <pose>4.9108427998847457 3.5283468808821032 0.5 0 0 0</pose>
+      <pose>4.9108427998847457 3.5283468808821032 0.49999999990199806 6.2287739151293738e-22 9.3279666454713669e-22 -3.6315533669320137e-22</pose>
       <link name='box_link'>
         <inertial>
           <inertia>
@@ -121,55 +118,8 @@
       <static>false</static>
       <self_collide>false</self_collide>
     </model>
-    <model name='sphere'>
-      <pose>4.3024324922331036 0.63439839132561882 0.5 0 0 0</pose>
-      <link name='sphere_link'>
-        <inertial>
-          <inertia>
-            <ixx>0.10000000000000001</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>0.10000000000000001</iyy>
-            <iyz>0</iyz>
-            <izz>0.10000000000000001</izz>
-          </inertia>
-          <mass>1</mass>
-          <pose>0 0 0 0 0 0</pose>
-        </inertial>
-        <collision name='sphere_collision'>
-          <geometry>
-            <sphere>
-              <radius>0.5</radius>
-            </sphere>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <visual name='sphere_visual'>
-          <geometry>
-            <sphere>
-              <radius>0.5</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>0.300000012 0.300000012 0.300000012 1</ambient>
-            <diffuse>0.699999988 0.699999988 0.699999988 1</diffuse>
-            <specular>1 1 1 1</specular>
-          </material>
-        </visual>
-        <pose>0 0 0 0 0 0</pose>
-        <enable_wind>false</enable_wind>
-      </link>
-      <static>false</static>
-      <self_collide>false</self_collide>
-    </model>
     <model name='cone'>
-      <pose>1.4745258343548917 2.9423824192128611 0.5 0 0 0</pose>
+      <pose>1.4732154155035606 2.9408778593240905 0.49999999991622396 1.1632044848892052e-07 -2.659319401457765e-08 0.017572902059282428</pose>
       <link name='cone_link'>
         <inertial>
           <inertia>
@@ -218,7 +168,7 @@
       <self_collide>false</self_collide>
     </model>
     <model name='box_0'>
-      <pose>-0.81356091926718044 4.1602014499805469 0.5 0 0 0</pose>
+      <pose>-0.81356091926718044 4.1602014499805469 0.49999999990199806 6.2287739151293738e-22 9.3279666454713669e-22 -3.6315533669320137e-22</pose>
       <link name='box_link'>
         <inertial>
           <inertia>
@@ -265,7 +215,7 @@
       <self_collide>false</self_collide>
     </model>
     <model name='box_1'>
-      <pose>-2.6862389542636702 1.751132783610561 0.5 0 0 0</pose>
+      <pose>-2.6862389542636702 1.751132783610561 0.49999999990199806 6.2287739151293738e-22 9.3279666454713669e-22 -3.6315533669320137e-22</pose>
       <link name='box_link'>
         <inertial>
           <inertia>
@@ -312,7 +262,7 @@
       <self_collide>false</self_collide>
     </model>
     <model name='box_2'>
-      <pose>3.1483982296143243 -2.0368813697833752 0.5 0 0 0</pose>
+      <pose>3.1499999999999999 -2.54 0.49999999990199806 3.4361003538289414e-21 -2.7258416712513707e-21 1.4448406434864052e-22</pose>
       <link name='box_link'>
         <inertial>
           <inertia>
@@ -359,7 +309,7 @@
       <self_collide>false</self_collide>
     </model>
     <model name='box_3'>
-      <pose>-1.1281622042356609 -1.8941471760412338 0.5 0 0 0</pose>
+      <pose>-1.1281622042356609 -1.8941471760412338 0.49999999990199806 6.2287739151293738e-22 9.3279666454713669e-22 -3.6315533669320137e-22</pose>
       <link name='box_link'>
         <inertial>
           <inertia>
@@ -406,7 +356,7 @@
       <self_collide>false</self_collide>
     </model>
     <model name='box_4'>
-      <pose>3.5819292296819398 -0.45701265919046274 0.5 0 0 0</pose>
+      <pose>3.5819292296819398 -0.45701265919046274 0.49999999990199806 6.2287739151293738e-22 9.3279666454713669e-22 -3.6315533669320137e-22</pose>
       <link name='box_link'>
         <inertial>
           <inertia>
@@ -453,7 +403,7 @@
       <self_collide>false</self_collide>
     </model>
     <model name='cylinder'>
-      <pose>2.8939609088776592 3.3865050865590596 0.5 0 0 0</pose>
+      <pose>2.9128524575935679 3.3996846481156466 0.50000593146799377 -4.548940504136115e-06 1.097210591025837e-05 -0.026733117453456131</pose>
       <link name='cylinder_link'>
         <inertial>
           <inertia>
@@ -502,7 +452,7 @@
       <self_collide>false</self_collide>
     </model>
     <model name='sphere_0'>
-      <pose>3.9511681986727591 1.7277848208608555 0.5 0 0 0</pose>
+      <pose>3.9511681986727591 1.7277848208608555 0.499999999902001 0 0 0</pose>
       <link name='sphere_link'>
         <inertial>
           <inertia>

@@ -35,62 +35,85 @@
     <disable_collisions link1="arm_base_link" link2="link_2_1" reason="Never"/>
     <disable_collisions link1="arm_base_link" link2="link_3_1" reason="Never"/>
     <disable_collisions link1="arm_base_link" link2="link_4_1" reason="Never"/>
+    <disable_collisions link1="arm_base_link" link2="motor0_shaft_link" reason="Never"/>
     <disable_collisions link1="arm_base_link" link2="motor1_shaft_link" reason="Never"/>
     <disable_collisions link1="arm_base_link" link2="motor2_shaft_link" reason="Never"/>
     <disable_collisions link1="arm_base_link" link2="motor3_shaft_link" reason="Never"/>
+    <disable_collisions link1="arm_base_link" link2="wheel0_link" reason="Never"/>
     <disable_collisions link1="arm_base_link" link2="wheel1_link" reason="Never"/>
     <disable_collisions link1="arm_base_link" link2="wheel2_link" reason="Never"/>
     <disable_collisions link1="arm_base_link" link2="wheel3_link" reason="Never"/>
     <disable_collisions link1="chassis_link" link2="link_1_1" reason="Never"/>
     <disable_collisions link1="chassis_link" link2="link_2_1" reason="Never"/>
+    <disable_collisions link1="chassis_link" link2="motor0_shaft_link" reason="Adjacent"/>
     <disable_collisions link1="chassis_link" link2="motor1_shaft_link" reason="Adjacent"/>
     <disable_collisions link1="chassis_link" link2="motor2_shaft_link" reason="Adjacent"/>
     <disable_collisions link1="chassis_link" link2="motor3_shaft_link" reason="Adjacent"/>
+    <disable_collisions link1="chassis_link" link2="wheel0_link" reason="Never"/>
     <disable_collisions link1="chassis_link" link2="wheel1_link" reason="Never"/>
     <disable_collisions link1="chassis_link" link2="wheel2_link" reason="Never"/>
     <disable_collisions link1="chassis_link" link2="wheel3_link" reason="Never"/>
     <disable_collisions link1="link_1_1" link2="link_2_1" reason="Adjacent"/>
     <disable_collisions link1="link_1_1" link2="link_3_1" reason="Never"/>
     <disable_collisions link1="link_1_1" link2="link_4_1" reason="Never"/>
+    <disable_collisions link1="link_1_1" link2="motor0_shaft_link" reason="Never"/>
     <disable_collisions link1="link_1_1" link2="motor1_shaft_link" reason="Never"/>
     <disable_collisions link1="link_1_1" link2="motor2_shaft_link" reason="Never"/>
     <disable_collisions link1="link_1_1" link2="motor3_shaft_link" reason="Never"/>
+    <disable_collisions link1="link_1_1" link2="wheel0_link" reason="Never"/>
     <disable_collisions link1="link_1_1" link2="wheel1_link" reason="Never"/>
     <disable_collisions link1="link_1_1" link2="wheel2_link" reason="Never"/>
     <disable_collisions link1="link_1_1" link2="wheel3_link" reason="Never"/>
     <disable_collisions link1="link_2_1" link2="link_3_1" reason="Adjacent"/>
     <disable_collisions link1="link_2_1" link2="link_4_1" reason="Never"/>
     <disable_collisions link1="link_2_1" link2="link_5_1" reason="Never"/>
+    <disable_collisions link1="link_2_1" link2="motor0_shaft_link" reason="Never"/>
     <disable_collisions link1="link_2_1" link2="motor1_shaft_link" reason="Never"/>
     <disable_collisions link1="link_2_1" link2="motor2_shaft_link" reason="Never"/>
     <disable_collisions link1="link_2_1" link2="motor3_shaft_link" reason="Never"/>
+    <disable_collisions link1="link_2_1" link2="wheel0_link" reason="Never"/>
     <disable_collisions link1="link_2_1" link2="wheel1_link" reason="Never"/>
     <disable_collisions link1="link_2_1" link2="wheel2_link" reason="Never"/>
     <disable_collisions link1="link_2_1" link2="wheel3_link" reason="Never"/>
     <disable_collisions link1="link_3_1" link2="link_4_1" reason="Adjacent"/>
     <disable_collisions link1="link_3_1" link2="link_5_1" reason="Never"/>
     <disable_collisions link1="link_3_1" link2="link_6_1" reason="Never"/>
+    <disable_collisions link1="link_3_1" link2="motor0_shaft_link" reason="Never"/>
     <disable_collisions link1="link_3_1" link2="motor1_shaft_link" reason="Never"/>
     <disable_collisions link1="link_3_1" link2="motor2_shaft_link" reason="Never"/>
     <disable_collisions link1="link_3_1" link2="motor3_shaft_link" reason="Never"/>
+    <disable_collisions link1="link_3_1" link2="wheel0_link" reason="Never"/>
     <disable_collisions link1="link_3_1" link2="wheel1_link" reason="Never"/>
     <disable_collisions link1="link_3_1" link2="wheel2_link" reason="Never"/>
     <disable_collisions link1="link_3_1" link2="wheel3_link" reason="Never"/>
     <disable_collisions link1="link_4_1" link2="link_5_1" reason="Adjacent"/>
     <disable_collisions link1="link_4_1" link2="link_6_1" reason="Never"/>
     <disable_collisions link1="link_5_1" link2="link_6_1" reason="Adjacent"/>
+    <disable_collisions link1="motor0_shaft_link" link2="motor1_shaft_link" reason="Never"/>
+    <disable_collisions link1="motor0_shaft_link" link2="motor2_shaft_link" reason="Never"/>
+    <disable_collisions link1="motor0_shaft_link" link2="motor3_shaft_link" reason="Never"/>
+    <disable_collisions link1="motor0_shaft_link" link2="wheel0_link" reason="Adjacent"/>
+    <disable_collisions link1="motor0_shaft_link" link2="wheel1_link" reason="Never"/>
+    <disable_collisions link1="motor0_shaft_link" link2="wheel2_link" reason="Never"/>
+    <disable_collisions link1="motor0_shaft_link" link2="wheel3_link" reason="Never"/>
     <disable_collisions link1="motor1_shaft_link" link2="motor2_shaft_link" reason="Never"/>
     <disable_collisions link1="motor1_shaft_link" link2="motor3_shaft_link" reason="Never"/>
+    <disable_collisions link1="motor1_shaft_link" link2="wheel0_link" reason="Never"/>
     <disable_collisions link1="motor1_shaft_link" link2="wheel1_link" reason="Adjacent"/>
     <disable_collisions link1="motor1_shaft_link" link2="wheel2_link" reason="Never"/>
     <disable_collisions link1="motor1_shaft_link" link2="wheel3_link" reason="Never"/>
     <disable_collisions link1="motor2_shaft_link" link2="motor3_shaft_link" reason="Never"/>
+    <disable_collisions link1="motor2_shaft_link" link2="wheel0_link" reason="Never"/>
     <disable_collisions link1="motor2_shaft_link" link2="wheel1_link" reason="Never"/>
     <disable_collisions link1="motor2_shaft_link" link2="wheel2_link" reason="Adjacent"/>
     <disable_collisions link1="motor2_shaft_link" link2="wheel3_link" reason="Never"/>
+    <disable_collisions link1="motor3_shaft_link" link2="wheel0_link" reason="Never"/>
     <disable_collisions link1="motor3_shaft_link" link2="wheel1_link" reason="Never"/>
     <disable_collisions link1="motor3_shaft_link" link2="wheel2_link" reason="Never"/>
     <disable_collisions link1="motor3_shaft_link" link2="wheel3_link" reason="Adjacent"/>
+    <disable_collisions link1="wheel0_link" link2="wheel1_link" reason="Never"/>
+    <disable_collisions link1="wheel0_link" link2="wheel2_link" reason="Never"/>
+    <disable_collisions link1="wheel0_link" link2="wheel3_link" reason="Never"/>
     <disable_collisions link1="wheel1_link" link2="wheel2_link" reason="Never"/>
     <disable_collisions link1="wheel1_link" link2="wheel3_link" reason="Never"/>
     <disable_collisions link1="wheel2_link" link2="wheel3_link" reason="Never"/>

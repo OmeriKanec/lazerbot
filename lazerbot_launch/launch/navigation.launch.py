@@ -29,14 +29,12 @@ def generate_launch_description():
         description='Flag to enable use_sim_time'
     )
 
-    # Generate path to config file
     interactive_marker_config_file_path = os.path.join(
         get_package_share_directory('interactive_marker_twist_server'),
         'config',
         'linear.yaml'
     )
 
-    # Path to the Slam Toolbox launch file
     nav2_localization_launch_path = os.path.join(
         get_package_share_directory('nav2_bringup'),
         'launch',

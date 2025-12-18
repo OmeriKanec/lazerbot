@@ -181,12 +181,8 @@ def generate_launch_description():
     launchDescriptionObject.add_action(robot_state_publisher_node)
     launchDescriptionObject.add_action(world_launch)
     launchDescriptionObject.add_action(spawn_entity)
-    # launchDescriptionObject.add_action(yaw_arg)
-    # launchDescriptionObject.add_action(joint_state_broadcaster_spawner)
-    # launchDescriptionObject.add_action(omni_base_controller_spawner)
     launchDescriptionObject.add_action(joint_state_broadcaster_event_handler)
     launchDescriptionObject.add_action(omni_base_controller_event_handler)
-    # launchDescriptionObject.add_action(rviz_node)
     launchDescriptionObject.add_action(rviz_event_handler)
     launchDescriptionObject.add_action(joint_trajectory_controller_spawner)
 

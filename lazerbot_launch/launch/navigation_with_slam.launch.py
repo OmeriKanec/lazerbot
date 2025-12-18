@@ -55,7 +55,6 @@ def generate_launch_description():
         'slam_toolbox_mapping.yaml'
     )
 
-    # Launch rviz
     rviz_node = Node(
         package='rviz2',
         executable='rviz2',
@@ -74,7 +73,6 @@ def generate_launch_description():
         output='screen',
     )
 
-    # Path to the Slam Toolbox launch file
     slam_toolbox_launch_path = os.path.join(
         get_package_share_directory('slam_toolbox'),
         'launch',

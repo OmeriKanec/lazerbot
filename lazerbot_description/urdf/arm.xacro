@@ -1,0 +1,209 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  
+
+
+  <xacro:macro name="arm" params="parent_link">
+  
+    <link name="arm_base_link">
+    <inertial>
+      <origin xyz="0 0 0.02" rpy="0 0 0"/>
+      <mass value="0.025"/>
+      <inertia ixx="0.00002" iyy="0.00002" izz="0.00003" ixy="0.0" iyz="0.0" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lazerbot_description/meshes/arm_base_link.stl" scale="0.0001 0.0001 0.0001"/>
+      </geometry>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://lazerbot_description/meshes/arm_base_link.stl" scale="0.0001 0.0001 0.0001"/>
+      </geometry>
+    </collision>
+    </link>
+
+    <joint name="arm_mount_joint" type="fixed">
+      <origin xyz="0.0 0.0 ${chassis_height/2 + 0.001}" rpy="0 0 0"/>
+      <parent link="${parent_link}"/>
+      <child link="arm_base_link"/>
+    </joint>
+
+    <link name="link_1_1">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.005"/>
+        <inertia ixx="0.000005" iyy="0.000005" izz="0.000005" ixy="0.0" iyz="0.0" ixz="0.0"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.0 -0.0 -0.008" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://lazerbot_description/meshes/link_1_1.stl" scale="0.0001 0.0001 0.0001"/>
+        </geometry>
+        <material name="silver"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.0 -0.0 -0.008" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://lazerbot_description/meshes/link_1_1.stl" scale="0.0001 0.0001 0.0001"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="link_2_1">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.005"/>
+        <inertia ixx="0.000005" iyy="0.000005" izz="0.000005" ixy="0.0" iyz="0.0" ixz="0.0"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.0200062 -0.0 -0.0229969" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://lazerbot_description/meshes/link_2_1.stl" scale="0.0001 0.0001 0.0001"/>
+        </geometry>
+        <material name="silver"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.0200062 -0.0 -0.0229969" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://lazerbot_description/meshes/link_2_1.stl" scale="0.0001 0.0001 0.0001"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="link_3_1">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.005"/>
+        <inertia ixx="0.000005" iyy="0.000005" izz="0.000005" ixy="0.0" iyz="0.0" ixz="0.0"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.0420717 -0.0 -0.0450624" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://lazerbot_description/meshes/link_3_1.stl" scale="0.0001 0.0001 0.0001"/>
+        </geometry>
+        <material name="silver"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.0420717 -0.0 -0.0450624" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://lazerbot_description/meshes/link_3_1.stl" scale="0.0001 0.0001 0.0001"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="link_4_1">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.005"/>
+        <inertia ixx="0.000006" iyy="0.000006" izz="0.000006" ixy="0.0" iyz="0.0" ixz="0.0"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.0201117 -0.0 -0.0670224" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://lazerbot_description/meshes/link_4_1.stl" scale="0.0001 0.0001 0.0001"/>
+        </geometry>
+        <material name="silver"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.0201117 -0.0 -0.0670224" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://lazerbot_description/meshes/link_4_1.stl" scale="0.0001 0.0001 0.0001"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="link_5_1">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.004"/>
+        <inertia ixx="0.000004" iyy="0.000004" izz="0.000004" ixy="0.0" iyz="0.0" ixz="0.0"/>
+      </inertial>
+      <visual>
+        <origin xyz="0.0078958 -0.0 -0.0950299" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://lazerbot_description/meshes/link_5_1.stl" scale="0.0001 0.0001 0.0001"/>
+        </geometry>
+        <material name="silver"/>
+      </visual>
+      <collision>
+        <origin xyz="0.0078958 -0.0 -0.0950299" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://lazerbot_description/meshes/link_5_1.stl" scale="0.0001 0.0001 0.0001"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="link_6_1">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.0025"/>
+        <inertia ixx="0.000003" iyy="0.000003" izz="0.000003" ixy="0.0" iyz="0.0" ixz="0.0"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.0200251 -0.0 -0.1229508" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://lazerbot_description/meshes/link_6_1.stl" scale="0.0001 0.0001 0.0001"/>
+        </geometry>
+        <material name="silver"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.0200251 -0.0 -0.1229508" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://lazerbot_description/meshes/link_6_1.stl" scale="0.0001 0.0001 0.0001"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="Revolute 1" type="continuous">
+      <origin xyz="0.0 0.0 0.008" rpy="0 0 0"/>
+      <parent link="arm_base_link"/>
+      <child link="link_1_1"/>
+      <axis xyz="0.0 0.0 1.0"/>
+    </joint>
+
+    <joint name="Revolute 2" type="revolute">
+      <origin xyz="0.0200062 0.0 0.0149969" rpy="0 0 0"/>
+      <parent link="link_1_1"/>
+      <child link="link_2_1"/>
+      <axis xyz="1.0 0.0 0.0"/>
+      <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+    </joint>
+
+    <joint name="Revolute 3" type="continuous">
+      <origin xyz="0.0220655 0.0 0.0220655" rpy="0 0 0"/>
+      <parent link="link_2_1"/>
+      <child link="link_3_1"/>
+      <axis xyz="0.0 0.0 1.0"/>
+    </joint>
+
+    <joint name="Revolute 4" type="revolute">
+      <origin xyz="-0.02196 0.0 0.02196" rpy="0 0 0"/>
+      <parent link="link_3_1"/>
+      <child link="link_4_1"/>
+      <axis xyz="-1.0 0.0 0.0"/>
+      <limit upper="2.181662" lower="-2.181662" effort="100" velocity="100"/>
+    </joint>
+
+    <joint name="Revolute 5" type="continuous">
+      <origin xyz="-0.0280075 0.0 0.0280075" rpy="0 0 0"/>
+      <parent link="link_4_1"/>
+      <child link="link_5_1"/>
+      <axis xyz="0.0 0.0 1.0"/>
+    </joint>
+
+    <joint name="Revolute 6" type="continuous">
+      <origin xyz="0.0279209 0.0 0.0279209" rpy="0 0 0"/>
+      <parent link="link_5_1"/>
+      <child link="link_6_1"/>
+      <axis xyz="1.0 0.0 0.0"/>
+    </joint>
+  </xacro:macro>
+
+
+</robot>

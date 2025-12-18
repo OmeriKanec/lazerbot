@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: lazerbot_description
+    relative_path: urdf/lazerbot.urdf.xacro
+  srdf:
+    relative_path: config/lazerbot.srdf
+  package_settings:
+    author_name: OmeriKanec
+    author_email: egor0505-lazarev@mail.ru
+    generated_timestamp: 1765898254
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity

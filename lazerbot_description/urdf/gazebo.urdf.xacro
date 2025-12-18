@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="lazerbot">
+    <gazebo reference="chassis_link">
+        <material>Gazebo/Black</material>
+    </gazebo>
+
+    <gazebo reference="wheel0_link">
+        <material>Gazebo/Grey</material>
+        <!-- <fdir1>0 1 0"</fdir1>
+        <mu1>1.7</mu1>
+        <mu2>0.2</mu2> -->
+    </gazebo>
+
+    <gazebo reference="wheel1_link">
+        <material>Gazebo/Grey</material>
+        <!-- <fdir1>0 1 0"</fdir1>
+        <mu1>1.7</mu1>
+        <mu2>0.2</mu2> -->
+    </gazebo>
+
+    <gazebo reference="wheel2_link">
+        <material>Gazebo/Grey</material>
+        <!-- <fdir1>0 1 0"</fdir1>
+        <mu1>1.7</mu1>
+        <mu2>0.2</mu2> -->
+    </gazebo>
+    
+    <gazebo reference="wheel3_link">
+        <material>Gazebo/Grey</material>
+        <!-- <fdir1>0 1 0"</fdir1>
+        <mu1>1.7</mu1>
+        <mu2>0.2</mu2> -->
+    </gazebo>
+
+    <gazebo>
+    <plugin filename="gz_ros2_control-system"
+            name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+      <!-- путь к YAML с контроллерами -->
+      <parameters>$(find lazerbot_control)/config/omni_wheel_drive_controller.yaml</parameters>
+      <controller_manager_prefix_node_name>controller_manager</controller_manager_prefix_node_name>
+    </plugin>
+  </gazebo>
+
+  <gazebo reference="camera_link">
+    <sensor name="camera" type="camera">
+      <always_on>true</always_on>
+      <visualize>true</visualize>
+      <update_rate>30</update_rate>
+
+      <!-- gz‑топик, по нему потом мост в ROS2 -->
+      <topic>camera/image_raw</topic>
+      <!-- frame из Gazebo, удобно делать совпадающим с TF -->
+      <gz_frame_id>camera_link</gz_frame_id>
+
+      <camera name="camera">
+        <horizontal_fov>1.047</horizontal_fov>
+        <image>
+          <width>640</width>
+          <height>480</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.05</near>
+          <far>10.0</far>
+        </clip>
+        <!-- инфа о камере идёт отдельным топиком -->
+        <camera_info_topic>camera/camera_info</camera_info_topic>
+      </camera>
+    </sensor>
+  </gazebo>
+
+  <!-- ===== LIDAR (2D ray, Harmonic) ===== -->
+  <gazebo reference="lidar_link">
+    <sensor name='gpu_lidar' type='gpu_lidar'>
+        <topic>scan</topic>
+        <update_rate>10</update_rate>
+        <gz_frame_id>lidar_link</gz_frame_id>
+        <ray>
+            <scan>
+                <horizontal>
+                    <samples>640</samples>
+                    <resolution>1</resolution>
+                    <min_angle>-1.396263</min_angle>
+                    <max_angle>1.396263</max_angle>
+                </horizontal>
+                <vertical>
+                    <samples>1</samples>
+                    <resolution>0.01</resolution>
+                    <min_angle>0</min_angle>
+                    <max_angle>0</max_angle>
+                </vertical>
+            </scan>
+            <range>
+                <min>0.08</min>
+                <max>10.0</max>
+                <resolution>0.01</resolution>
+            </range>
+        </ray>
+        <always_on>1</always_on>
+        <visualize>true</visualize>
+    </sensor>
+  </gazebo>
+
+  <gazebo reference="thermal_camera_link">
+  <sensor name="thermal_camera" type="thermal">
+    <always_on>true</always_on>
+    <update_rate>30</update_rate>
+    <visualize>true</visualize>
+    <camera>
+      <horizontal_fov>1.047</horizontal_fov>
+      <image>
+        <width>320</width>
+        <height>240</height>
+        <format>L8</format>
+      </image>
+      <clip>
+        <near>0.1</near>
+        <far>20.0</far>
+      </clip>
+    </camera>
+    <topic>/thermal_camera/image_raw</topic>
+  </sensor>
+</gazebo>
+</robot>
